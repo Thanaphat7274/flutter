@@ -33,33 +33,35 @@ class HomeScreen extends StatelessWidget {
 
       ),
       body:Center(
-        child :
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // 
-                Image.network(
-                  "https://www.loc.gov/static/portals/free-to-use/public-domain/presidential-portraits/47-donald-trump.jpg",
-                  height: 100,
-                  width: 100,),
-                Icon(
-                  Icons.person,
-                  size: 100,
-                ),
-                Image.asset(
-                  'assets/download.jpg',
-                  height: 100,
-                  width: 100,
-                ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.lightBlue),
-                onPressed: () {
-                  print("Button Clicked");
-                },
-                child: Text("Click Me", style: TextStyle(color: Colors.white)),
-              ),
-              ],
-            ),
+        child :ListView.builder(
+          itemCount:20,
+          itemBuilder:(context,index){
+            return Container(
+              height: 100,
+              width:double.infinity,
+              color:Colors.blue,
+              child: Center(child: Text('Item $index')),
+            );
+          })
+            // ListView(
+            //   children: [
+            //     Container(
+            //       height: 350,
+            //       width:double.infinity,
+            //       color:Colors.blue
+            //     ),
+            //     Container(
+            //       height: 350,
+            //       width:double.infinity,
+            //       color:Colors.yellow
+            //     ),
+            //     Container(
+            //       height: 350,
+            //       width:double.infinity,
+            //       color:Colors.red
+            //     )
+            //   ],
+            // ),
       ),
       
       backgroundColor: const Color.fromARGB(255, 240, 239, 238),
