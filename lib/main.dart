@@ -32,31 +32,50 @@ class HomeScreen extends StatelessWidget {
         title : const Text("First Time App"),backgroundColor: Colors.white,
 
       ),
-      body: Center(
-       child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Container(
-              height: 100,
-              width : 100,
-              color: Colors.red,
-            ),
-            Expanded(
-              child:Container(
-              height: 100,
-              width : 100,
-              color: Colors.green,
+      body:
+      Stack(alignment:Alignment.center,
+        children:[
+          Positioned(
+            top: 250,
+            left: 150,          
+            child: Container(
+              height: 300,
+              width: 120,
+              decoration:BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(20)
               ),
             ),
-            Expanded(
-              child:Container(
-                height: 100,
-                width:100,
-                color:Colors.blue
+          ),
+          Positioned(
+            top: 275,
+            left: 175,
+            child: CircleAvatar(
+              radius: 35,
+              backgroundColor: Colors.red,
+            ),
+          ),
+          Positioned(
+            top: 360,
+            right: 180,
+            child: CircleAvatar(
+              radius: 35,
+              backgroundColor: Colors.yellow,
+            ),
+          ),
+          Positioned(
+            top: 450,
+            right: 178,
+            child: Container(
+              height: 70,
+              width: 70,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(35),
               ),
             ),
-          ],
-        ),
+          )
+        ]
       ),
       backgroundColor: const Color.fromARGB(255, 240, 239, 238),
     );
