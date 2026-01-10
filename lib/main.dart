@@ -36,11 +36,9 @@ class HomeScreen extends StatelessWidget {
         child :ListView.builder(
           itemCount:20,
           itemBuilder:(context,index){
-            return Container(
-              height: 100,
-              width:double.infinity,
-              color:Colors.blue,
-              child: Center(child: Text('Item $index')),
+            return ListTile(
+              tileColor: Colors.blue,
+              title: Text('Item $index'),
             );
           })
             // ListView(
