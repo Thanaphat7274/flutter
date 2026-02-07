@@ -1,3 +1,4 @@
+import 'package:first_project/Screen/greetingWidget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 139, 47)),
         useMaterial3: true,
       ),
-      home: const HomeScreen()
+      home:  Greetingwidget(
+        name: "Thanaphat2",
+        bgcolor: Colors.red,)
     );
   }
 }
@@ -66,4 +69,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
 
