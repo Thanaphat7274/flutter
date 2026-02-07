@@ -29,7 +29,7 @@ class Greetingwidget extends StatelessWidget {
             SizedBox(height: 10,),
             ElevatedButton(onPressed: 
             (){
-              Navigator.push(context, MaterialPageRoute<void>(builder: (BuildContext context)=> const ContentScreen()));
+              Navigator.pushNamed(context, '/content');
             }, child: Text("Content"))
           ],
         ),

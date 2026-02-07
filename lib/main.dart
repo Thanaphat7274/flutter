@@ -1,3 +1,4 @@
+import 'package:first_project/Screen/content_screen.dart';
 import 'package:first_project/Screen/greetingWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,10 +20,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 139, 47)),
         useMaterial3: true,
       ),
-      home:  Greetingwidget(
-        name: "Thanaphat2",
-        bgcolor: Colors.red,
-      ),
+      initialRoute: '/greeting',
+      routes: {
+        '/greeting':(context) =>Greetingwidget(name: "sukchuen", bgcolor: Colors.red),
+        '/content' :(context) => ContentScreen(),
+      },
+      home: Greetingwidget(name: "thanaphat", bgcolor: Colors.amber),
     );
   }
 }
