@@ -1,3 +1,4 @@
+import 'package:first_project/Screen/content_screen.dart';
 import 'package:first_project/component/like_card.dart';
 import 'package:first_project/component/profile_card.dart';
 import 'package:first_project/component/text_card.dart';
@@ -25,6 +26,11 @@ class Greetingwidget extends StatelessWidget {
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxt_0PJ8T-KXXZa6YvyLG9iwdnCjpy-VfAQ&s",
             ),
             LikeCard(),
+            SizedBox(height: 10,),
+            ElevatedButton(onPressed: 
+            (){
+              Navigator.push(context, MaterialPageRoute<void>(builder: (BuildContext context)=> const ContentScreen()));
+            }, child: Text("Content"))
           ],
         ),
       ),
