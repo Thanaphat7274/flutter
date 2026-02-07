@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       home:  Greetingwidget(
         name: "Thanaphat2",
-        bgcolor: Colors.red,)
+        bgcolor: Colors.red,
+      ),
     );
   }
 }
