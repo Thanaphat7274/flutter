@@ -2,6 +2,7 @@ import 'package:first_project/Screen/content_screen.dart';
 import 'package:first_project/Screen/greetingWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:first_project/Screen/list_screen.dart';
+import 'package:first_project/Screen/product_scereen/list_product.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/greeting':(context) =>Greetingwidget(name: "sukchuen", bgcolor: Colors.red),
         '/content' :(context) => ContentScreen(),
         '/user' :(context) => ListScreen(),
+        '/product' :(context) => ListProduct(),
       },
       home: Greetingwidget(name: "thanaphat", bgcolor: Colors.amber),
     );
