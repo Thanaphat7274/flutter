@@ -26,11 +26,13 @@ class Greetingwidget extends StatelessWidget {
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxt_0PJ8T-KXXZa6YvyLG9iwdnCjpy-VfAQ&s",
             ),
             LikeCard(),
-            SizedBox(height: 10,),
-            ElevatedButton(onPressed: 
-            (){
-              Navigator.pushNamed(context, '/content');
-            }, child: Text("Content"))
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/content');
+              },
+              child: Text("Content"),
+            ),
           ],
         ),
       ),
