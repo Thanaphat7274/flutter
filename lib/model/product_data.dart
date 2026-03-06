@@ -10,17 +10,17 @@ class ProductData {
     required this.name,
     required this.description,
     required this.price,
-    required this.imageUrl,
+    this.imageUrl = '',
   });
 
   ProductData.fromjson(Map<String, dynamic> json)
-      : id = json['id'],
-        name = json['name'],
-        description = json['description'],
-        price = json['price'],
-        imageUrl = json['imageUrl'];
+    : id = json['id'] ?? '',
+      name = json['name'] ?? '',
+      description = json['description'] ?? '',
+      price = (json['price'] ?? 0).toDouble(),
+      imageUrl = json['imageUrl'] ?? '';
 
-  Map<String,dynamic>  toJson() =>{
+  Map<String, dynamic> toJson() => {
     'id': id,
     'name': name,
     'description': description,

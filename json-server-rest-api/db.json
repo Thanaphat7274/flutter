@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "iphone16 plus",
+      "description": "Apple Mobile Phone",
+      "price": 55555
+    },
+    {
+      "id": "2",
+      "name": "Samsung S25ULtra",
+      "description": "Samsung mobile phone",
+      "price": 61000
+    },
+    {
+      "id": "3",
+      "name": "iphone 5s",
+      "description": "apple smartphone",
+      "price": 20000
+    }
+  ]
+}

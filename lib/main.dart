@@ -1,9 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:first_project/Screen/content_screen.dart';
 import 'package:first_project/Screen/greetingWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:first_project/Screen/list_screen.dart';
 import 'package:first_project/Screen/product_scereen/list_product.dart';
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -22,12 +27,13 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      initialRoute: '/greeting',
+      initialRoute: '/product',
       routes: {
-        '/greeting':(context) =>Greetingwidget(name: "sukchuen", bgcolor: Colors.red),
-        '/content' :(context) => ContentScreen(),
-        '/user' :(context) => ListScreen(),
-        '/product' :(context) => ListProduct(),
+        '/greeting': (context) =>
+            Greetingwidget(name: "sukchuen", bgcolor: Colors.red),
+        '/content': (context) => ContentScreen(),
+        '/user': (context) => ListScreen(),
+        '/product': (context) => ListProduct(),
       },
       home: Greetingwidget(name: "thanaphat", bgcolor: Colors.amber),
     );

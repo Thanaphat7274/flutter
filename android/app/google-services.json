@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "69644684545",
+    "project_id": "mobile-eeda2",
+    "storage_bucket": "mobile-eeda2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69644684545:android:07bb246986802b39f0df00",
+        "android_client_info": {
+          "package_name": "com.example.first_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdNeRnyMJnwZrD3jCXVCd5YJ7jkEMzvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
