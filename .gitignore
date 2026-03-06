@@ -43,3 +43,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase config files (contain API keys - do not commit)
+android/app/google-services.json
+lib/firebase_options.dart
+
+# Local JSON server (mock API - local only)
+json-server-rest-api/
