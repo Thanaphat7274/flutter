@@ -4,6 +4,7 @@ import 'package:first_project/Screen/greetingWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:first_project/Screen/list_screen.dart';
 import 'package:first_project/Screen/product_scereen/list_product.dart';
+import 'Screen/airQuality_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/content': (context) => ContentScreen(),
         '/user': (context) => ListScreen(),
         '/product': (context) => ListProduct(),
+        '/aqi': (context) => AirqualityScreen(),
       },
       home: Greetingwidget(name: "thanaphat", bgcolor: Colors.amber),
     );
