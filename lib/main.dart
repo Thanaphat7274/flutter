@@ -6,6 +6,7 @@ import 'package:first_project/Screen/list_screen.dart';
 import 'package:first_project/Screen/product_scereen/list_product.dart';
 import 'Screen/airQuality_screen.dart';
 import 'firebase_options.dart';
+import 'Screen/profile_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/user': (context) => ListScreen(),
         '/product': (context) => ListProduct(),
         '/aqi': (context) => AirqualityScreen(),
+        '/profile': (context) => ProfilePage(),
       },
       home: Greetingwidget(name: "thanaphat", bgcolor: Colors.amber),
     );
