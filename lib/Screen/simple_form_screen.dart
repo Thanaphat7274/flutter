@@ -10,7 +10,7 @@ class SimpleFormScreen extends StatefulWidget {
 class _SimpleFormScreenState extends State<SimpleFormScreen> {
   String strInput = "";
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-  //Textteditingcontroller
+  
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   @override
@@ -23,7 +23,7 @@ class _SimpleFormScreenState extends State<SimpleFormScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Dispplay input : $strInput'),
-            //username
+            
             TextFormField(
               controller: _nameController,
               decoration: InputDecoration(
@@ -49,6 +49,7 @@ class _SimpleFormScreenState extends State<SimpleFormScreen> {
                 if (value == null || value.isEmpty) {
                   return "กรุณากรอกขอมูล password";
                 }
+                return null;
               },
             ),
             ElevatedButton(

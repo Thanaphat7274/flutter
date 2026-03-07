@@ -5,26 +5,44 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
-        CircleAvatar(radius: 40),
-        SizedBox(height: 10),
-        SizedBox(width: 70),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Text("Thanaphat"), Text("Posts")],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      child: Row(
+        children: [
+          const CircleAvatar(radius: 40, backgroundColor: Colors.grey),
+          const SizedBox(width: 24),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                _StatColumn(count: '221', label: 'Posts'),
+                _StatColumn(count: '6,280', label: 'Followers'),
+                _StatColumn(count: '350', label: 'Following'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _StatColumn extends StatelessWidget {
+  final String count;
+  final String label;
+
+  const _StatColumn({required this.count, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          count,
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
-        SizedBox(width: 50),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Text("Thanaphat"), Text("Followers")],
-        ),
-        SizedBox(width: 50),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Text("Thanaphat"), Text("Following")],
-        ),
+        const SizedBox(height: 2),
+        Text(label, style: const TextStyle(fontSize: 13, color: Colors.grey)),
       ],
     );
   }

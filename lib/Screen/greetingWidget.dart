@@ -1,4 +1,3 @@
-import 'package:first_project/Screen/content_screen.dart';
 import 'package:first_project/component/like_card.dart';
 import 'package:first_project/component/profile_card.dart';
 import 'package:first_project/component/text_card.dart';

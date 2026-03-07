@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 class ProfileStats extends StatefulWidget {
@@ -10,39 +8,23 @@ class ProfileStats extends StatefulWidget {
 }
 
 class _ProfileStatsState extends State<ProfileStats> {
-  Future<void> _launchUrl(String url) async {
-    final Uri uri = Uri.parse(url);
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Padding(
-          padding: EdgeInsets.only(left: 16),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text("thanaphat"),
-                Text("work|status"),
-                GestureDetector(
-                  onTap: () => _launchUrl('https://example.com'),
-                  child: Text(
-                    "https://example.com",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+            'Thanaphat Dev',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
           ),
-        ),
-      ],
+          SizedBox(height: 2),
+          Text('Flutter Developer', style: TextStyle(fontSize: 14)),
+          SizedBox(height: 2),
+          Text('thanaphat', style: TextStyle(fontSize: 14, color: Colors.grey)),
+        ],
+      ),
     );
   }
 }
