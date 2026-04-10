@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:first_project/Screen/Fromcar/fromcar.dart';
 import 'package:first_project/Screen/content_screen.dart';
 import 'package:first_project/Screen/greetingWidget.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,13 @@ import 'package:first_project/Screen/product_scereen/list_product.dart';
 import 'Screen/airQuality_screen.dart';
 import 'firebase_options.dart';
 import 'Screen/profile_page.dart';
+import 'Screen/simple_form_screen.dart';
+import 'Screen/simple_from_ok.dart';
+import 'Screen/Comment_Card/comment_scereen.dart';
+import 'Screen/Concert_Ticket/concert.dart';
+import 'Screen/food_detail.dart';
+import 'Screen/test_final/search_app.dart';
+import 'Screen/test_final/form_calculator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,6 +46,13 @@ class MyApp extends StatelessWidget {
         '/product': (context) => ListProduct(),
         '/aqi': (context) => AirqualityScreen(),
         '/profile': (context) => ProfilePage(),
+        '/from': (context) => SimpleFormScreen(),
+        '/comment': (context) => CommentScereen(),
+        '/concert': (context) => Concert(),
+        '/fromcar': (context) => Fromcar(),
+        '/fooddetail': (context) => FoodDetail(),
+        '/search': (context) => SearchApp(),
+        '/formcalculator': (context) => FormCalculator(),
       },
       home: Greetingwidget(name: "thanaphat", bgcolor: Colors.amber),
     );
